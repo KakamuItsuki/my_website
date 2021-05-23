@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+header{
+    background: rgb(58, 73, 60);
+    /* background-color: rgb(72, 110, 103); */
+    
+    position: fixed;
+    width: 100vw;
+    z-index:15;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+/* header > div{ */
+     /* margin: 15px auto 15px 20px; */
+     
+    /* font-size: 20px; */
+    /* float: left; */
+    /* font-family: cursive; */
+    /* color: white; */
+   
+/* }  */
+#header-left{
+    margin: 2px auto 3px 20px; 
+    height: 40px; 
+    display: flex;
+    width: 60px;
+
+    /* position: absolute; */
+    /* left: 10px; */
+    /* top: 3px; */
+    /* bottom: 3px; */
+    
+}
+#header-right{
+    display: flex;
+    margin-right: 10px;
+   /* text-decoration: none; */
+   font-size: 20px;
+    /* float: left; */
+    font-family: cursive;
+    color: white;
+   
+}
+
+
+#header-right > li {
+    list-style: none;
+    margin: 10px 20px;
+    
+}
+#header-right > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+#header-profile{
+    text-decoration: none;
+    color: white;
+}
+@media  screen and (min-width:781px) {
+    #nav{
+        display: none;
+    }
+}
+@media  screen and (max-width:780px) {
+    #header-left{
+      
+        height: 35px; 
+        
+        width: 50px;
+        margin-left:5px ;
+        
+        
+    }
+    #header-right{
+        display: none;
+    }
+
+    #nav{
+        position: absolute;
+        height: 100vh;
+        width: 50%;
+        right: -50%;
+        top: 0;
+        background: #9cc08e9f;
+        transition: .7s;
+      }
+      #nav ul{
+        padding-top: 40px;
+      }
+      #nav ul li{
+        list-style-type: none;
+        font-size: 20px;
+        font-family: cursive;
+      }
+      #nav a{
+        display: block;
+        text-decoration: none;
+        color: #000000;
+        margin: 0 15px;
+        padding: 10px;
+        transition: .5s;
+      
+      }
+      #nav li a:hover{
+        color: #ffffff;
+        background: #4d6354;
+        border-bottom: none;
+      }
+      #hamburger {
+        display: block;
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        width: 30px;
+        height: 19px;
+        cursor: pointer;
+        transition: 1s;
+      }
+      .inner_line {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #ffffff;
+        transition: 1s;
+        border-radius: 4px;
+      }
+      #line1 {
+        top: 0;
+      }
+      #line2 {
+        top: 8px;
+      }
+      #line3 {
+        bottom: 0px;
+      }
+      
+      .in{
+        transform: translateX(-100%);
+      }
+      .line_1,.line_2,.line_3{
+        background: #000000;
+      }
+      .line_1 {
+        transform: translateY(8px) rotate(-45deg);
+        top: 0;
+      }
+      .line_2 {
+        opacity: 0;
+      }
+      .line_3 {
+        transform: translateY(-8px) rotate(45deg);
+        bottom: 0;
+      }
+      
+}
+    
+
+
+.home{
+    background-image: url(./img/room.JPG);
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+@media  screen and (max-width:780px) {
+    .home{
+        background-image: url(./img/room.JPG);
+        background-size: cover;
+        height: 40vh;
+        width: 100vw;
+        font-family: 'Noto Serif JP', sans-serif;
+    }
+}
+
+.home >div{
+     position: absolute; 
+     right: 30px;
+     top: 120px;
+     /* margin: 200px 50px 200px 550px ;  */
+     /* margin: 40px 50px 200px 550px;  */
+}
+
+.home > div >h1{
+    font-size: 50px;
+    color: black;
+    text-shadow: 2px 2px 5px  rgba(196, 211, 209, 0.973);
+    margin-bottom: 40px;
+}
+
+.home > div > h2{
+    font-size: 20px;
+    color: black;
+    text-shadow: 2px 2px 5px  rgba(196, 211, 209, 1);
+    margin-left: 100px;
+}
+
+@media  screen and (max-width:780px) {
+    .home >div{
+        position: absolute; 
+        right: 20px;
+        top: 50px;
+        /* position: absolute; */ 
+        /* margin: 65px 10px 100px auto; */
+        /* display: flex;   */
+        /* flex-direction: column;   */
+    }
+    .home > div >h1{
+        font-size: 17px;
+        
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 5px  rgb(8, 8, 8);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .home > div > h2{
+        font-size: 8px;
+        color: rgb(255, 255, 255);
+        text-shadow: 2px 2px 5px  rgb(3, 3, 3);
+        margin-left: auto;
+        
+    }
+}
+.dishes{
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+}
+
+.dishpart{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+
+.slidedown{
+    position: relative;
+    display: none;
+}
+/* .slidedown{ */
+    /* display: none; */
+/* } */
+@media  screen and (max-width:780px) {
+    .dishes{
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+    }
+    
+    .dishpart{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .slidedown{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    
+}
+
+.dishpart > h2{
+    font-size: 25px;
+    font-family: 'Noto Serif JP', sans-serif;
+    margin: 20px 20px 30px 20px;
+    
+}
+
+.sentence{
+    margin-left: 60px;
+    font-size: 18px;
+    font-family: 'Noto Serif JP', sans-serif;
+    line-height: 32px;
+}
+
+@media  screen and (max-width:780px) {
+    .dishpart > h2{
+        font-size: 14px;
+        font-family: 'Noto Serif JP', sans-serif;
+        margin: 5px auto 10px 8px;
+        
+    }
+    
+    .sentence{
+        margin: auto 30px;
+        font-size: 13px;
+        font-family: 'Noto Serif JP', sans-serif;
+        line-height: 18px;
+        
+    }
+}
+.group{
+    display: flex;
+    margin-top: 20px;
+    /* margin: 20px 50px auto 50px; */
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+.set1{
+    display: flex;
+    margin: 0 0px auto 10px;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+.set2{
+    display: flex;
+    margin: 0 10px auto 0px;
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+@media  screen and (max-width:780px) {
+    .group{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    
+    .set1{
+        display: flex;
+        flex-direction: column;
+        margin: 17px auto; 
+        font-family: 'Noto Serif JP', sans-serif;
+    }
+    .set2{
+        display: flex;
+        flex-direction: column;
+        margin: 17px auto; 
+        font-family: 'Noto Serif JP', sans-serif;
+    }
+}
+
+.dishimg{
+     height: auto;
+     width: 30vw;
+    /* margin: 20px; */
+    border-radius: 2%;
+    
+}
+
+.details{
+    margin-top: 10px;
+    padding-bottom: 50px;
+    padding-right: 0px;
+    padding-left: 15px;
+    line-height: 21px;
+    font-size: 15px;
+    position: relative;
+    width: 200px;
+   
+}
+
+.sum{
+    right: 15px;
+    bottom: 30px;
+    position: absolute;
+    /* ↑親要素にrelative、子要素に上三行 */
+}
+
+@media screen and (max-width:780px) {
+    .dishimg{
+        height: auto;
+        width: 250px;
+        /* margin: 20px; */
+        border-radius: 2%;
+    }
+    .details{
+        margin-top: 8px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+        /* padding-right: 10px; */
+        line-height: 18px;
+        font-size: 13px;
+        position: relative;
+        width: 240px;
+    }
+    
+    .sum{
+        right: 10px;
+        bottom: 0px; 
+        position: absolute;
+       
+        /* ↑親要素にrelative、子要素に上三行 */
+    }
+    .menu{
+        padding-bottom: 10px;
+    }
+}
+
+.View_More_toggle.View_More{
+    background-color: rgba(75, 119, 97, 0.671);
+    color:rgb(18, 24, 17);
+    border: 1px solid;
+}
+.View_More{
+    right: 20px;
+    bottom: 10px;
+    text-align: center;
+    background-color: rgb(5, 75, 35);
+    color: white;
+    padding: 20px 50px;
+    width: 150px;
+    border-radius: 1%;
+    position: absolute;
+}
+
+@media screen and (max-width:780px) {
+    .View_More{
+        margin: 10px auto;
+        padding: 20px 40px;
+        width: 120px;
+        right: auto;
+        bottom: 0px;
+    }
+}
+
+.profile{
+    font-family: 'Noto Serif JP', sans-serif;
+    margin: 20px auto auto 7vw;
+    
+    
+}
+.profile > h2 {
+   font-size: 25px;
+}
+
+
+.profile-main {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+}
+
+.profile-img{
+    margin: 15px 15px auto 5px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.profile-sentence {
+    /* vertical-align: middle; */
+    font-size: 17px;
+    background-color: rgba(107, 138, 120, 0.137);
+    width: 600px;
+    line-height: 200%;
+    margin: 30px auto;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@media  screen and (max-width:780px) {
+    .profile{
+        margin: auto;
+        padding: 5%;
+    }
+    
+    .profile > h2 {
+       font-size: 14px;
+
+    }
+    
+    
+    .profile-main {
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .profile-img{
+        margin:auto;
+        width: 50vw;
+        border-radius: 50%;
+        
+    }
+    
+    .profile-sentence {
+        /* vertical-align: middle; */
+        font-size: 10px;
+        background-color: rgba(107, 138, 120, 0.137);
+        width: 100%;
+        line-height: 200%;
+        margin: 13px auto auto auto;
+        padding-left: 4px;
+    }
+
+}
+.top{
+    font-family: 'Noto Serif JP', sans-serif;
+    margin: 50px auto 40px 30px;
+    font-size: 20px;
+}
+
+footer{
+    background: rgb(58, 73, 60);
+    height: 50px;
+    width: 100vw;
+}
+
+@media screen and (max-width:780px) {
+    .top{
+        margin: auto auto 30px 15px;
+        font-size: 13px;
+    }
+    
+    footer{
+        
+        background: rgb(58, 73, 60);
+        height: 50px;
+        
+    }
+}
